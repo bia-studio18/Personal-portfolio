@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 preloader.classList.add("hidden");
             }, 400);
         });
-        // Fallback in case load already fired
+        // Fallback
         setTimeout(() => {
             preloader.classList.add("hidden");
         }, 1500);
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
             menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
         });
 
-        // Close menu when a link is clicked
         navLinks.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -60,14 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
         new Typed("#typing", {
             strings: [
                 "Frontend Developer",
-                "BS Information Technology Student",
-                "UI Enthusiast",
-                "JavaScript Learner",
-                "Open for Internships"
+                "Building Clean UIs",
+                "Next.js & TypeScript",
+                "Design Systems Enthusiast",
+                "Open for Opportunities"
             ],
             typeSpeed: 45,
             backSpeed: 25,
-            backDelay: 2500,
+            backDelay: 2200,
             smartBackspace: true,
             loop: true,
             showCursor: true,
@@ -78,9 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // AOS Animation
     if (typeof AOS !== "undefined") {
         AOS.init({
-            duration: 900,
+            duration: 800,
             once: true,
-            offset: 100,
+            offset: 80,
             easing: "ease-out-cubic"
         });
     }
@@ -90,18 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (scrollBtn) {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 400) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
+            scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
         });
 
         scrollBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 
@@ -131,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                     .catch(function (error) {
                         console.error(error);
-                        alert("❌ Something went wrong. Please try again.");
+                        alert("❌ Something went wrong. Please try again or email me directly.");
                         sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
                         sendBtn.disabled = false;
                     });
