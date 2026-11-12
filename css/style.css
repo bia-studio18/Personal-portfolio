@@ -619,9 +619,7 @@ body.dark-mode .section-tag {
 }
 
 .project-image.aether { background: linear-gradient(135deg, #5C6B4F, #87A96B); }
-.project-image.shoephile { background: linear-gradient(135deg, #7B2D26, #A0522D); }
 .project-image.space { background: linear-gradient(135deg, #1a1a2e, #4a3f6b); }
-.project-image.hermes { background: linear-gradient(135deg, #2C1810, #5C1F1A); }
 .project-image.weather { background: linear-gradient(135deg, #3d5a80, #98c1d9); }
 .project-image.portfolio { background: linear-gradient(135deg, #7B2D26, #C4A484); }
 
