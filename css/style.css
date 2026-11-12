@@ -592,6 +592,8 @@ body.dark-mode .section-tag {
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -605,11 +607,14 @@ body.dark-mode .section-tag {
 
 .project-image {
     height: 180px;
+    min-height: 180px;
+    max-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    flex-shrink: 0;
 }
 
 .project-image i {
@@ -618,9 +623,9 @@ body.dark-mode .section-tag {
     opacity: 0.9;
 }
 
-.project-image.aether { background: linear-gradient(135deg, #5C6B4F, #87A96B); }
-.project-image.space { background: linear-gradient(135deg, #1a1a2e, #4a3f6b); }
-.project-image.weather { background: linear-gradient(135deg, #3d5a80, #98c1d9); }
+.project-image.aether    { background: linear-gradient(135deg, #5C6B4F, #87A96B); }
+.project-image.space     { background: linear-gradient(135deg, #1a1a2e, #4a3f6b); }
+.project-image.weather   { background: linear-gradient(135deg, #3d5a80, #98c1d9); }
 .project-image.portfolio { background: linear-gradient(135deg, #7B2D26, #C4A484); }
 
 .project-badge {
@@ -637,6 +642,9 @@ body.dark-mode .section-tag {
 
 .project-content {
     padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
@@ -650,6 +658,7 @@ body.dark-mode .section-tag {
     color: var(--text-light);
     margin-bottom: 16px;
     line-height: 1.6;
+    flex: 1;
 }
 
 .project-stack {
@@ -676,6 +685,7 @@ body.dark-mode .project-stack span {
 .project-links {
     display: flex;
     gap: 12px;
+    margin-top: auto;
 }
 
 .live-btn,
